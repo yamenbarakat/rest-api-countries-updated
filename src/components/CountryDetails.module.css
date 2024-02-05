@@ -1,0 +1,158 @@
+.countryDetails {
+  padding: 50px 10px 0;
+}
+
+.back {
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.back,
+.borders a {
+  box-shadow: 1px 1px 8px 0px var(--shadow-color);
+  background-color: var(--white);
+}
+
+.back i {
+  margin-right: 10px;
+}
+
+.content h2 {
+  margin: 40px 0 30px;
+  font-size: 24px;
+}
+
+.content {
+  font-size: 15px;
+}
+
+.imgContainer {
+  max-width: 400px;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.info li {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.info span:first-child {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.bordersContainer p {
+  font-weight: 600;
+}
+
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 500px;
+}
+
+.borders a {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--dark-blue-text);
+}
+
+/* dark mode */
+
+:global(.dark) .countryDetails {
+  color: var(--light-gray);
+}
+
+:global(.dark) .back,
+:global(.dark) .borders a {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+  box-shadow: 1px 1px 8px 0px var(--shadow-dark-color);
+  color: var(--light-gray);
+}
+
+:global(.dark) .info span,
+:global(.dark) .bordersContainer p,
+:global(.dark) .borders a {
+  font-weight: 300;
+}
+
+:global(.dark) .info span:last-child {
+  opacity: 0.7;
+}
+
+:global(.dark) .borders a {
+  opacity: 0.8;
+}
+
+/* media query */
+
+@media (min-width: 950px) {
+  .back {
+    margin: 20px 0 70px;
+  }
+
+  .content {
+    display: flex;
+    gap: 70px;
+  }
+
+  .details {
+    flex: 1;
+  }
+
+  .details h2 {
+    margin-top: 0;
+    font-size: 27px;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    gap: 120px;
+  }
+
+  .info {
+    margin-bottom: 50px;
+  }
+
+  .imgContainer {
+    max-width: 500px;
+  }
+
+  .bordersContainer {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .bordersContainer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}

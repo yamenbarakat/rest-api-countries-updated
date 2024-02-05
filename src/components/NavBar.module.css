@@ -1,0 +1,16 @@
+.nav {
+  padding: 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+@media (min-width: 770px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

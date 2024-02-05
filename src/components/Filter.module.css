@@ -1,0 +1,70 @@
+.filter {
+  width: 220px;
+  position: relative;
+  font-size: 14px;
+}
+
+.filter .dropdown,
+.filter ul {
+  border-radius: 6px;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 1px 1px 8px 0px var(--shadow-color);
+  background-color: var(--white);
+}
+
+.filter .dropdown {
+  border: none;
+  padding: 16px 22px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter .dropdown::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  font: var(--fa-font-solid);
+  content: "\f078";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+
+.filter ul {
+  position: absolute;
+  margin-top: 4px;
+  z-index: 100;
+}
+
+.filter li {
+  padding: 7px 22px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.filter li:first-child {
+  padding-top: 14px;
+}
+
+.filter li:last-child {
+  padding-bottom: 14px;
+}
+
+.filter li:hover {
+  padding-left: 32px;
+}
+
+/* dark mode */
+
+:global(.dark) .filter .dropdown,
+:global(.dark) .filter ul {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+  font-weight: 300;
+  box-shadow: 1px 1px 8px 0px var(--shadow-dark-color);
+}
